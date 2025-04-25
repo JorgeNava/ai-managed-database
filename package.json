@@ -1,0 +1,23 @@
+{
+  "name": "ai-managed-database",
+  "version": "1.0.0",
+  "description": "DynamoDB MCP Agent using mcp-server-aws and Agno MCP Tools.",
+  "main": "main.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JorgeNava/ai-managed-database.git"
+  },
+  "keywords": [
+    "MCP",
+    "AI managed database"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JorgeNava/ai-managed-database/issues"
+  },
+  "homepage": "https://github.com/JorgeNava/ai-managed-database#readme"
+}
