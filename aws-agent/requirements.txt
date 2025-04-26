@@ -1,0 +1,4 @@
+mcp-agent==0.0.17
+boto3
+python-dotenv
+PyYAML

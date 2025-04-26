@@ -67,9 +67,9 @@ async def run_dynamodb_agent(message):
     try:
         server_params = StdioServerParameters(
             command="npx",
-            args=["-y", "@modelcontextprotocol/server-aws"],
+            args=["-y", "@smithery/cli", "install", "mcp-server-aws", "--client", "vscode", "--key", "3ed7fb65-8a85-4cb5-838f-90151b581db4"],
         )
-        
+
         async with stdio_client(server_params) as (read, write):
             async with ClientSession(read, write) as session:
                 mcp_tools = MCPTools(session=session)
@@ -83,6 +83,10 @@ async def run_dynamodb_agent(message):
                         - Return results in a readable format.
                         - Provide useful insights when possible.
                         Use the following tools when you need to perform the queries:
+                        - dynamodb_table_create: Create a new DynamoDB table
+                        - dynamodb_table_describe: Get details about a DynamoDB table
+                        - dynamodb_table_delete: Delete a DynamoDB table
+                        - dynamodb_table_update: Update a DynamoDB table
                         - dynamodb_batch_get: Batch get multiple items from DynamoDB tables
                         - dynamodb_item_batch_write: Batch write operations (put/delete) for DynamoDB items
                         - dynamodb_batch_execute: Execute multiple PartiQL statements in a batch

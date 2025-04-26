@@ -1,0 +1,19 @@
+execution_engine: asyncio
+
+logger:
+  transports: [console]
+  level: info
+
+mcp:
+  servers:
+    aws:
+      command: npx
+      args:
+        - "--silent"
+        - "--prefix"
+        - "./aws-mcp"
+        - "start"
+      description: "MCP server exposing S3 & DynamoDB tools"
+
+openai:
+  default_model: gpt-4o

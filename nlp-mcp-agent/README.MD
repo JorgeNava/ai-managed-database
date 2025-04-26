@@ -34,7 +34,7 @@
 
 1. Start the Streamlit app:
    ```bash
-   streamlit run app.py
+   streamlit run agent.py
    ```
 
 2. In the app interface:
